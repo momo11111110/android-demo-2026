@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 实验任务二：表格布局。
+     stretchColumns="1" 让第 2 列（索引为 1 的空列）被拉伸，
+     从而把快捷键文字挤到屏幕右侧；
+     Import 行不提供第 3 列，Quit 行第 1 列留空使文字与上面的菜单项对齐。 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/table_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!-- 顶部标题栏 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/table_header_bg"
+        android:paddingStart="14dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="8dp"
+        android:text="Hello TableLayout"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:stretchColumns="1">
+
+        <TableRow>
+
+            <TextView
+                style="@style/MenuItem"
+                android:text="Open..." />
+
+            <TextView
+                style="@style/MenuItem"
+                android:text="" />
+
+            <TextView
+                style="@style/MenuShortcut"
+                android:text="Ctrl-O" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/MenuItem"
+                android:text="Save..." />
+
+            <TextView
+                style="@style/MenuItem"
+                android:text="" />
+
+            <TextView
+                style="@style/MenuShortcut"
+                android:text="Ctrl-S" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/MenuItem"
+                android:text="Save As..." />
+
+            <TextView
+                style="@style/MenuItem"
+                android:text="" />
+
+            <TextView
+                style="@style/MenuShortcut"
+                android:text="Ctrl-Shift-S" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="6dp"
+            android:background="@color/table_divider" />
+
+        <TableRow>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="14dp"
+                android:contentDescription="Import"
+                android:src="@drawable/ic_remove" />
+
+            <TextView
+                style="@style/MenuItem"
+                android:paddingStart="10dp"
+                android:text="Import..." />
+        </TableRow>
+
+        <TableRow>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="14dp"
+                android:contentDescription="Export"
+                android:src="@drawable/ic_remove" />
+
+            <TextView
+                style="@style/MenuItem"
+                android:paddingStart="10dp"
+                android:text="Export..." />
+
+            <TextView
+                style="@style/MenuShortcut"
+                android:text="Ctrl-E" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="6dp"
+            android:background="@color/table_divider" />
+
+        <TableRow>
+
+            <TextView
+                style="@style/MenuItem"
+                android:text="" />
+
+            <TextView
+                style="@style/MenuItem"
+                android:text="Quit" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

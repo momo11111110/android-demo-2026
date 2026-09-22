@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 线性布局网格中的单元格 -->
+    <style name="GridCell">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:background">@drawable/bg_cell</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">2dp</item>
+        <item name="android:paddingEnd">2dp</item>
+        <item name="android:textColor">@color/grid_text</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <!-- 表格布局菜单项文字 -->
+    <style name="MenuItem">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingEnd">14dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textColor">@color/table_text</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- 计算器按钮（约束布局横向链，宽 0dp 自动等宽） -->
+    <style name="CalcButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_marginStart">6dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginEnd">6dp</item>
+        <item name="android:background">@drawable/bg_calc_button</item>
+        <item name="android:textColor">#FF333333</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <!-- 表格布局右侧快捷键文字 -->
+    <style name="MenuShortcut">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">end|center_vertical</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textColor">@color/table_text</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 实验任务三：约束布局 1 —— 计算器界面。
+     每行 4 个按钮组成横向 spread 链（宽 0dp 自动等宽），
+     行与行之间通过 top-to-bottom 约束保持均匀的垂直间距。 -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/calc_bg"
+    android:fitsSystemWindows="true">
+
+    <!-- 标题栏 -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@color/calc_title_bg"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:text="ConstraintLayoutTest"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 输入框 -->
+    <EditText
+        android:id="@+id/etInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Input"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <!-- 结果显示条 -->
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_calc_result"
+        android:gravity="center_vertical|end"
+        android:paddingEnd="10dp"
+        android:text="0.0"
+        android:textColor="#FF4A4630"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etInput" />
+
+    <!-- 第 1 行按钮：7 8 9 ÷ -->
+    <Button
+        android:id="@+id/btn7"
+        style="@style/CalcButton"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="18dp"
+        android:text="7"
+        app:layout_constraintEnd_toStartOf="@id/btn8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvResult" />
+
+    <Button
+        android:id="@+id/btn8"
+        style="@style/CalcButton"
+        android:text="8"
+        app:layout_constraintEnd_toStartOf="@id/btn9"
+        app:layout_constraintStart_toEndOf="@id/btn7"
+        app:layout_constraintTop_toTopOf="@id/btn7" />
+
+    <Button
+        android:id="@+id/btn9"
+        style="@style/CalcButton"
+        android:text="9"
+        app:layout_constraintEnd_toStartOf="@id/btnDivide"
+        app:layout_constraintStart_toEndOf="@id/btn8"
+        app:layout_constraintTop_toTopOf="@id/btn7" />
+
+    <Button
+        android:id="@+id/btnDivide"
+        style="@style/CalcButton"
+        android:layout_marginEnd="14dp"
+        android:text="&#247;"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn9"
+        app:layout_constraintTop_toTopOf="@id/btn7" />
+
+    <!-- 第 2 行按钮：4 5 6 × -->
+    <Button
+        android:id="@+id/btn4"
+        style="@style/CalcButton"
+        android:layout_marginStart="14dp"
+        android:text="4"
+        app:layout_constraintEnd_toStartOf="@id/btn5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn7" />
+
+    <Button
+        android:id="@+id/btn5"
+        style="@style/CalcButton"
+        android:text="5"
+        app:layout_constraintEnd_toStartOf="@id/btn6"
+        app:layout_constraintStart_toEndOf="@id/btn4"
+        app:layout_constraintTop_toTopOf="@id/btn4" />
+
+    <Button
+        android:id="@+id/btn6"
+        style="@style/CalcButton"
+        android:text="6"
+        app:layout_constraintEnd_toStartOf="@id/btnMultiply"
+        app:layout_constraintStart_toEndOf="@id/btn5"
+        app:layout_constraintTop_toTopOf="@id/btn4" />
+
+    <Button
+        android:id="@+id/btnMultiply"
+        style="@style/CalcButton"
+        android:layout_marginEnd="14dp"
+        android:text="&#215;"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn6"
+        app:layout_constraintTop_toTopOf="@id/btn4" />
+
+    <!-- 第 3 行按钮：1 2 3 + -->
+    <Button
+        android:id="@+id/btn1"
+        style="@style/CalcButton"
+        android:layout_marginStart="14dp"
+        android:text="1"
+        app:layout_constraintEnd_toStartOf="@id/btn2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn4" />
+
+    <Button
+        android:id="@+id/btn2"
+        style="@style/CalcButton"
+        android:text="2"
+        app:layout_constraintEnd_toStartOf="@id/btn3"
+        app:layout_constraintStart_toEndOf="@id/btn1"
+        app:layout_constraintTop_toTopOf="@id/btn1" />
+
+    <Button
+        android:id="@+id/btn3"
+        style="@style/CalcButton"
+        android:text="3"
+        app:layout_constraintEnd_toStartOf="@id/btnPlus"
+        app:layout_constraintStart_toEndOf="@id/btn2"
+        app:layout_constraintTop_toTopOf="@id/btn1" />
+
+    <Button
+        android:id="@+id/btnPlus"
+        style="@style/CalcButton"
+        android:layout_marginEnd="14dp"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn3"
+        app:layout_constraintTop_toTopOf="@id/btn1" />
+
+    <!-- 第 4 行按钮：. 0 = − -->
+    <Button
+        android:id="@+id/btnDot"
+        style="@style/CalcButton"
+        android:layout_marginStart="14dp"
+        android:text="."
+        app:layout_constraintEnd_toStartOf="@id/btn0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn1" />
+
+    <Button
+        android:id="@+id/btn0"
+        style="@style/CalcButton"
+        android:text="0"
+        app:layout_constraintEnd_toStartOf="@id/btnEquals"
+        app:layout_constraintStart_toEndOf="@id/btnDot"
+        app:layout_constraintTop_toTopOf="@id/btnDot" />
+
+    <Button
+        android:id="@+id/btnEquals"
+        style="@style/CalcButton"
+        android:text="="
+        app:layout_constraintEnd_toStartOf="@id/btnMinus"
+        app:layout_constraintStart_toEndOf="@id/btn0"
+        app:layout_constraintTop_toTopOf="@id/btnDot" />
+
+    <Button
+        android:id="@+id/btnMinus"
+        style="@style/CalcButton"
+        android:layout_marginEnd="14dp"
+        android:text="&#8722;"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnEquals"
+        app:layout_constraintTop_toTopOf="@id/btnDot" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
