@@ -1,0 +1,50 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- 天线 -->
+    <path
+        android:fillColor="#A4C639"
+        android:pathData="M42,14 L36,6" />
+    <path
+        android:fillColor="#A4C639"
+        android:pathData="M58,14 L64,6" />
+
+    <!-- 头部（半圆） -->
+    <path
+        android:fillColor="#A4C639"
+        android:pathData="M24,45 A26,26 0 0 1 76,45 Z" />
+
+    <!-- 眼睛 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,33 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M62,33 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0" />
+
+    <!-- 身体 -->
+    <path
+        android:fillColor="#A4C639"
+        android:pathData="M31,47 h38 a5,5 0 0 1 5,5 v25 a5,5 0 0 1 -5,5 h-38 a5,5 0 0 1 -5,-5 v-25 a5,5 0 0 1 5,-5 z" />
+
+    <!-- 左臂 -->
+    <path
+        android:fillColor="#A4C639"
+        android:pathData="M14,47 h9 v30 h-9 z" />
+    <!-- 右臂 -->
+    <path
+        android:fillColor="#A4C639"
+        android:pathData="M77,47 h9 v30 h-9 z" />
+
+    <!-- 左腿 -->
+    <path
+        android:fillColor="#A4C639"
+        android:pathData="M33,84 h9 v14 h-9 z" />
+    <!-- 右腿 -->
+    <path
+        android:fillColor="#A4C639"
+        android:pathData="M58,84 h9 v14 h-9 z" />
+</vector>

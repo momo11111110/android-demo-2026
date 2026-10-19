@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Experiment3" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <!-- 任务三（XML 菜单）与任务四（ActionMode 上下文菜单）需要 ActionBar 才能展示菜单 -->
+    <style name="Theme.Experiment3.ActionBar" parent="android:Theme.Material.Light.DarkActionBar">
+        <item name="android:colorPrimary">@color/actionbar_green</item>
+        <item name="android:colorPrimaryDark">@color/actionbar_green_dark</item>
+        <!-- 关闭强制边到边，避免内容被 ActionBar 覆盖 -->
+        <item name="android:windowOptOutEdgeToEdgeEnforcement">true</item>
+    </style>
+</resources>

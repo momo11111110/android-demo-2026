@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- 任务二：自定义对话框标题栏橙色 -->
+    <color name="dialog_header">#FFFFA000</color>
+    <color name="dialog_text">#FF333333</color>
+
+    <!-- 任务三/任务四：ActionBar 墨绿色 -->
+    <color name="actionbar_green">#FF00695C</color>
+    <color name="actionbar_green_dark">#FF004D40</color>
+
+    <!-- 任务五：RecyclerView 名称文字 -->
+    <color name="item_text">#FF222222</color>
+</resources>
